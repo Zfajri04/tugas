@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\Auth;
 class UserServiceImpl implements UserService
 {
 
-    function login(string $email, string $password): bool
+    function login(string $email, string $password) : bool
     {
-        return Auth::attempt([
-            "email" => $email,
-            "password" => $password
-        ]);
+      return Auth::attempt([
+        'email' => $email,
+        'password' => $password
+    ]);
     }
 }
